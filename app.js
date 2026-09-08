@@ -15,7 +15,6 @@ app.get("/", (req, res) => {
 
 app.use("/books", bookRoutes);
 
-// 404 cho các route không tồn tại
 app.use((req, res) => {
   res.status(404).json({ message: "Route not found" });
 });
